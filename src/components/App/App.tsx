@@ -5,7 +5,7 @@ import CreateRecipe from '../create-recipe/CreateRecipe.js'
 
 const userId = 1
 function App() {
-	const { isLoading, data } = useGetRecipesQuery(undefined, {
+	const { isLoading, data } = useGetRecipesQuery(null, {
 		// можно использовать если юзера еще нет в системе допустим
 		skip: !userId,
 	})
