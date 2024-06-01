@@ -1,12 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { Irecipe } from '../../types/recipe.types'
 
-const initialState = []
+const initialState:Irecipe[] = []
 
 export const favoritesSlice = createSlice({
     name: 'favorites',
     initialState,
     reducers: {
-        toggleFavorites: (state, {payload: recipe}) => { // state, action
+        toggleFavorites: (state, {payload: recipe}:PayloadAction<Irecipe>) => { // state, action
             const isExists = state.some(r => r.id === recipe.id)
             if (isExists){
                 const index = state.findIndex(item => item.id === recipe.id)

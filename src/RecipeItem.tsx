@@ -1,9 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { actions } from './store/favorites/favorites.slice'
-import { useFavorites } from './hooks/useFavorites'
+import {useDispatch, useSelector} from 'react-redux'
+import {actions} from './store/favorites/favorites.slice'
+import {useFavorites} from './hooks/useFavorites'
+import { Irecipe } from './types/recipe.types'
 
+interface IRecipeItem {
+    recipe: Irecipe
+}
 
-export function RecipeItem({recipe}) {
+export function RecipeItem({recipe}: IRecipeItem) {
     const favorites = useFavorites()
     const dispatch = useDispatch()
 
@@ -13,7 +17,14 @@ export function RecipeItem({recipe}) {
         <div className='recipe'>
             <img src={recipe.image} alt={recipe.name} className='recipe-img'/>
             <h2 className='recipe-name'>{recipe.name}</h2>
-            <button onClick={() => dispatch(actions.toggleFavorites(recipe))} className='recipe-button'>{isExists ? 'Remove from ' : "Add to "} {"<3"}</button>
+            <button
+                onClick={() => dispatch(actions.toggleFavorites(recipe))}
+                className='recipe-button'>{
+                    isExists
+                        ? 'Remove from '
+                        : "Add to "
+                }
+                {"<3"}</button>
         </div>
     )
 }
