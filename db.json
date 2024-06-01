@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "15-minute chicken & halloumi burgers",
+      "image": "https://www.themealdb.com/images/media/meals/vdwloy1713225718.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Lamb Pilaf (Plov)",
+      "image": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Beetroot Soup (Borscht)",
+      "image": "https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Fish Soup (Ukha)",
+      "image": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg"
+    },
+    {
+      "id": "a984",
+      "name": "New Burger",
+      "image": "https://www.themealdb.com/images/media/meals/vdwloy1713225718.jpg"
+    }
+  ]
+}
